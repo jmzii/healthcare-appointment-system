@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, h1, h2, h3, p, button, input, select {
+    margin: 1;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ced2e6;
+  }
+  
+  header {
+    background-color: #003366;
+    color: #f4f4f4;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #003366;
+    padding: 0.5em;
+    border-radius: 5px;
+  }
+  
+  nav a {
+    background-color: #4da6ff;
+    color: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+  }
+  
+  footer {
+    color: #000000;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+  }
+  
+  form {
+    margin-top: 1em;
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #4da6ff;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #003366;
+  }
+  
