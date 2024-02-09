@@ -9,7 +9,7 @@ Data moves from app to database succesfully and user can make basic appointments
 ![Appointment views](frontend/public/healthcareAppointmentSystem_demo2.PNG)
 ![Appointment views](frontend/public/healthcareAppointmentSystem_demo3.PNG)
 ![Appointment views](frontend/public/healthcareAppointmentSystem_demo4.PNG)
-![Appointment views](frontend/public/healthcareAppointmentSystem_demo5.PNG)
+![Appointment views](frontend/public/healthcareAppointmentSystem_demo.PNG)
 
 ## Technologies used
 
