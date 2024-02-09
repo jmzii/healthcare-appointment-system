@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const mysql = require("mysql2");
 
 // Database connection
@@ -10,6 +11,7 @@ const connection = mysql.createConnection({
   database: "appointment_system",
 });
 
+// if database cant connect show error
 connection.connect((err) => {
   if (err) {
     console.error("Error connecting to the database:", err);
@@ -18,18 +20,35 @@ connection.connect((err) => {
   console.log("Connected to the database");
 });
 
-/* Testing the connection
-app.get((res) => {
-  connection.query("SELECT * FROM doctors", (err, results) => {
-    if (err) {
-      console.error("Error querying the database:", err);
-      res.status(500).json({ error: "Internal Server Error" });
-      return;
+app.use(cors());
+app.use(express.json());
+
+// Handle appointment submit to database
+app.post("/MakeAppointment", (req, res) => {
+  const { appointments_id, appointmentdate, appointmenttime, selecteddoctor } =
+    req.body;
+
+  const insertQuery =
+    "INSERT INTO appointments (appointments_id, appointmentdate, appointmenttime, selecteddoctor) VALUES (?, ?, ?, ?)";
+
+  connection.query(
+    insertQuery,
+    [appointments_id, appointmentdate, appointmenttime, selecteddoctor],
+    (err) => {
+      if (err) {
+        console.error(
+          "Error inserting appointment to appointments table: ",
+          err
+        );
+        res.status(500).json({ error: "Error submitting appointment" });
+        return;
+      }
+
+      console.log("Appointment table updated succesfully");
+      res.status(200).json({ message: "Appointment submitted!" });
     }
-    res.json(results);
-  });
+  );
 });
-*/
 
 const PORT = process.env.PORT || 3001;
 
