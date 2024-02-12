@@ -7,7 +7,7 @@ function Navigation() {
       <Link to="/MakeAppointment">
         <button>Make an Appointment</button>
       </Link>
-      <Link to="/login">
+      <Link to="/Login">
         <button>Login</button>
       </Link>
     </nav>
