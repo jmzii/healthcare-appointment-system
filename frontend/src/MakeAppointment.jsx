@@ -64,7 +64,7 @@ const MakeAppointment = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // log response from server
+        console.log(data);
       })
 
       .catch((error) => {
